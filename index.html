@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Lista Telefonica</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./Foto.jpg" alt="Icone de um telefone">
+            <h1> Lista Telefonica</h1>
+        </header>
+        <form id="formularioContato">
+            <input type="text" class="campo-nome" id="nome-completo" required placeholder="Nome Completo" />
+            <br>
+            <input type="tel" class="campo-ddd" id="ddd" required placeholder="DDD" minlength="2" maxlength="2" />
+            <input type="tel" class="campo-telefone" id="telefone" required placeholder="Telefone" maxlength="9" />
+            <br>
+            <input type="button" value="Cadastrar" onclick="adicionarContato()">   
+        </form>
+
+        <table id="tabelaContatos">
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
