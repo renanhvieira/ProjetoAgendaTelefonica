@@ -1,25 +1,20 @@
+const form = document.getElementById('formularioContato');
+let linhas = ``;
 
-function adicionaLinha() {
-    const tabela = document.getElementById('tabelaContatos');
-    const inputNome = document.getElementById('nome-completo').value;
-    const inputDDD = document.getElementById('ddd').value;
-    const inputTelefone = document.getElementById('telefone').value; 
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    const novaLinha = tabela.insertRow();
-    const celulaNome = novaLinha.insertCell();
-    const CelulaTelefone = novaLinha.insertCell();
+    const inputNomeCompleto = document.getElementById('nome-completo');
+    const inputTelefone = document.getElementById('telefone-ddd');
 
-    celulaNome.textContent = nome-completo;
-    CelulaTelefone.textContent = telefone;
+    let linha = '<tr>';
+    linha += `<td>${inputNomeCompleto.value}</td>`;
+    linha += `<td${inputTelefone.value}</td>`;
+    linha += `</tr>`;
 
-}
+    linhas += linha;
 
-    
+    const corpoTabela = document.querySelector('tbody');
+    corpoTabela.innerHTML = linhas;
 
-
-
-// Limpar os campos do formulário após o cadastro
-document.getElementById("nome-completo").value = "";
-document.getElementById("ddd").value = "";
-document.getElementById("telefone").value = "";
-
+});
