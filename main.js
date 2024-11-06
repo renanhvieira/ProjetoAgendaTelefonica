@@ -9,7 +9,7 @@ form.addEventListener('submit', function (e) {
 
     let linha = '<tr>';
     linha += `<td>${inputNomeCompleto.value}</td>`;
-    linha += `<td${inputTelefone.value}</td>`;
+    linha += `<td>${inputTelefone.value}</td>`;
     linha += `</tr>`;
 
     linhas += linha;
